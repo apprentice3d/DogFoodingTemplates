@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Manager</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+<!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav left">
+            <li>
+                <a href="http://developer.autodesk.com" target="_blank">
+                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="20">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of navbar -->
+<div class="container-fluid">
+    <div class="row fill">
+        <!--        <div class="col-sm-8 fill">-->
+        <div class="container col-xs-6" id="table_container">
+            <div class="panel panel-default my_card">
+                <div class="panel-heading titleBar">
+                    <h4> Wombat Toys  </h4>
+                    <h4 class="user-type-label"> Designer </h4>
+                </div>
+                
+                <div class="card_content">
+                    <!--                    <div class="" style="background-color: red;">-->
+                    <div class="subtitle">
+                        <div>
+                            <span class="panel_label">Design Feedback</span>
+                        </div>
+                        <div>
+                            <span class="item_name pull-right">Review Status: <span>Draft</span></span>
+                        </div>
+                    </div>
+                    <div style="margin-left:15px;">
+                        <span class="item_name">Car Toy #1</span>
+                        <div class="pull-right" style="position:relative">
+                            <div class="form-group my_options">
+                                <select class="form-control" id="body">
+                                    <option>Body Design #1</option>
+                                    <option>Body Design #2</option>
+                                    <option>Body Design #3</option>
+                                </select>
+                            </div>
+                            <div class="form-group my_options">
+                                <select class="form-control" id="wheel">
+                                    <option>Wheel Design #1</option>
+                                    <option>Wheel Design #2</option>
+                                    <option>Wheel Design #3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                    </div>-->
+                   <img class="center_image" src="./img/model.png"/>
+
+                    <div class="comment_box">
+                        <div class="change_record">
+                            <img class="change_user" style="width:50px; height:50px"/>
+                            <div class="record">
+                                <span class="user_label">Client, March 10th, 1pm</span>
+                                <div class="change_content">
+                                    <span>I think the wheels are too small. Can we make them bigger?</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="change_record">
+                            <img class="change_user" style="width:50px; height:50px"/>
+                            <div class="record">
+                                <span class="user_label">Client,March 9th, 10am</span>
+                                <div class="change_content">
+                                    <span>Can we get one with sleeker design?</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="change_record">
+                            <img class="change_user" style="width:50px; height:50px"/>
+                            <div class="record">
+                                <span class="user_label">Project Manager,Today 9th, 10am</span>
+                                <div class="change_content">
+                                    <span>Review Status set to Draft</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="comment_box">
+                        <div class="change_record">
+                            <img class="change_user" style="width:50px; height:50px"/>
+                            <div class="record">
+                                <span class="user_label">Designer, Today 10th, 1pm</span>
+                                <div class="change_content">
+                                    <span>Design updated to Body Design #1</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    var dataSet = [
+        [ "wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21" ],
+        [ "wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14" ],
+        [ "axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2" ],
+        [ "body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18" ],
+        [ "body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16" ],
+        [ "body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12" ],
+        [ "body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11" ],
+        [ "body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10" ],
+
+    ];
+
+</script>
+
+
+</body>
+</html>
