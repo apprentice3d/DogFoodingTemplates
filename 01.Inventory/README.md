@@ -19,7 +19,7 @@ This template expects 3 endpoints:
 ]
 ```
     
- 2. `POST /newrecord` to add a new record to inventory and pass a JSON like:
+ 2. `POST /newrecord` to add a new record to inventory by passing a JSON like:
  
  ```
  {
@@ -33,6 +33,8 @@ This template expects 3 endpoints:
  }
  ```
  
+ and expecting data in same form as in case of endpoint (1)
+ 
  3. `POST /filter` to get all records abidding to given filter, where the filter will be sent in form of:
 
 ```
@@ -40,6 +42,10 @@ This template expects 3 endpoints:
     "filter": "Wheel"
 }
 ```
+
+ and expecting data in same form as in case of endpoint (1)
+ 
+ -----
 
 After all is implemented, the following behaviour is expected:
 
