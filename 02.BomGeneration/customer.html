@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inventory Tracking</title>
+    <title>Bom generation - client</title>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
 <!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
@@ -21,7 +19,8 @@
         <ul class="nav navbar-nav left">
             <li>
                 <a href="http://developer.autodesk.com" target="_blank">
-                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="20">
+                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png"
+                         height="20">
                 </a>
             </li>
         </ul>
@@ -30,61 +29,165 @@
 <!-- End of navbar -->
 <div class="container-fluid">
     <div class="row fill">
-<!--        <div class="col-sm-8 fill">-->
+        <!--        <div class="col-sm-8 fill">-->
         <div class="container" id="table_container">
             <div class="panel panel-default">
                 <h4 class="panel-heading"> Wombat Toys
                 </h4>
                 <div class="row" id="table_content">
-                    <span class="item_label">Inventory tracker</span>
-                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+                    <span class="item_label">Products</span>
+                    <br/>
+                    <br/>
+                    <!--                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>-->
+                    <table class="table table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col" style="width: 30px"></th>
 
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/model.png" style="width: 80px"/></th>
+                            <td>Car Toy #1</td>
+                            <td>$20.00</td>
+                            <td>
+                                <button type="button" class="btn btn-light pull-right" data-toggle="modal" data-target="#configure" style="margin-right:10px;
+    margin-bottom: 15px">
+                                    Configure
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/sedan.png" style="width: 80px"/></th>
+                            <td>Sedan Toy #1</td>
+                            <td>$10.00</td>
+                            <td>
+                                <button type="button" class="btn btn-light pull-right" data-toggle="modal" data-target="#configure" style="margin-right:10px;
+    margin-bottom: 15px">
+                                    Configure
+                                </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/truck.png" style="width: 80px"/></th>
+                            <td>Truck Toy #1</td>
+                            <td>$30.00</td>
+                            <td>
+                                <button type="button" class="btn btn-light pull-right" data-toggle="modal" data-target="#configure" style="margin-right:10px;
+    margin-bottom: 15px">
+                                    Configure
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+            <div class="modal fade" id="configure" tabindex="-1" role="dialog" aria-labelledby="addRecordLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+<!--                            <h4 class="panel-heading"> Wombat Toys</h4>-->
+                            <h5 class="modal-title" id="addRecordLabel">Toy Race Car Customizer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="margin:auto"><img class="center_image" src="./img/model.png" style="height: 100px"/></div>
+                            <br/>
+                            <div class="ml-auto options">
+                                <div class="form-group my_options" style="grid-template-columns: 100px auto">
+                                    <img src="./img/wheel.png"  style="width:50px;display: block;margin-left: auto;"/>
+                                    <label style="display: block;margin-right: auto;">Wheel x 4</label>
+
+                                </div>
+                                <div class="form-group my_options">
+<!--                                    <label for="color">Color:</label>-->
+                                    <select class="form-control" id="color">
+                                        <option>Natural</option>
+                                        <option>Wood</option>
+                                        <option>Metal</option>
+                                    </select>
+                                    <label style="display: block;margin-right: auto;">$20.00</label>
+                                </div>
+                                <div class="form-group my_options" style="grid-template-columns: 100px auto">
+                                    <img src="./img/body.png"  style="width:50px;display: block;margin-left: auto;"/>
+                                    <label style="display: block;margin-right: auto;">Body   </label>
+                                </div>
+                                <div class="form-group my_options">
+                                    <select class="form-control" id="size">
+                                        <option>Red</option>
+                                        <option>Blue</option>
+                                        <option>Black</option>
+                                    </select>
+                                    <label style="display: block;margin-right: auto;">$40.00</label>
+                                </div>
+                                <div style="border-top: 1px solid gray">
+
+                                </div>
+                                <div class="form-group my_options" style="grid-template-columns: 140px auto;border-top: 1px solid gray;">
+                                    <span></span>
+                                    <label style="display: block;margin-right: auto;">$60.00</label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="addRec">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
     </div>
 
 </div>
 
 
 <script>
-    var dataSet = [
-        [ "wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21" ],
-        [ "wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14" ],
-        [ "axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2" ],
-        [ "body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18" ],
-        [ "body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16" ],
-        [ "body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12" ],
-        [ "body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11" ],
-        [ "body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10" ],
+    var Inventory = [
+        ["wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21"],
+        ["wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14"],
+        ["axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2"],
+        ["body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18"],
+        ["body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16"],
+        ["body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12"],
+        ["body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11"],
+        ["body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10"],
 
     ];
 
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            "order": [[ 1, "asc" ]],
-            "paging":   false,
-            data: dataSet,
-            columns: [
-                { title: "",
-                    "render": function(data, type, row) {
-                        return '<img src="./img/'+data+'.png"  style="width:50px;"/>';
-                    },
-                    orderable: false,
-                    searchable: false,
-                    className: "thumb"
-                },
-                { title: "Part No.",
-                    className: "sorting_1"
-                },
-                { title: "Part Name" },
-                { title: "Vendor" },
-                { title: "Used In" },
-                { title: "Cost" },
-                { title: "Quantity" }
-            ]
-        } );
-    } );
+    const Cars = [
+        {
+            name: "Car Toy #1",
+            parts: {
+                axle: 2,
+                body: 3,
+                wheels: 0
+            }
+        },
+        {
+            name: "Car Toy #2",
+            parts: {
+                axle: 2,
+                body: 4,
+                wheels: 2
+            }
+        },
+    ]
+
 
 </script>
 

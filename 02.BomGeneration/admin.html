@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bom generation - admin</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav left">
+            <li>
+                <a href="http://developer.autodesk.com" target="_blank">
+                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png"
+                         height="20">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of navbar -->
+<div class="container-fluid">
+    <div class="row fill">
+        <!--        <div class="col-sm-8 fill">-->
+        <div class="container" id="table_container">
+            <div class="panel panel-default">
+                <h4 class="panel-heading"> Wombat Toys
+                </h4>
+                <div class="row" id="table_content">
+                    <span class="item_label">Admin Products</span>
+                    <br/>
+                    <br/>
+                    <!--                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>-->
+                    <table class="table table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Wholesale</th>
+                            <th scope="col">Retail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/model.png" style="width: 80px"/></th>
+                            <td>Car Toy #1</td>
+                            <td>12</td>
+                            <td>$16.00</td>
+                            <td>$20.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/sedan.png" style="width: 80px"/></th>
+                            <td>Sedan Toy #1</td>
+                            <td>12</td>
+                            <td>$10.00</td>
+                            <td>$7.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="width: 50px"><img src="./img/truck.png" style="width: 80px"/></th>
+                            <td>Truck Toy #1</td>
+                            <td>5</td>
+                            <td>$26.00</td>
+                            <td>$30.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" class="btn btn-light pull-right" data-toggle="modal" data-target="#addRecord"
+                        style="margin-right:10px;
+    margin-bottom: 15px">
+                    Add new Record
+                </button>
+            </div>
+
+            <div class="modal fade" id="addRecord" tabindex="-1" role="dialog" aria-labelledby="addRecordLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" style="display: inline-block ">
+                        <div class="modal-header">
+                            <!--                            <h4 class="panel-heading"> Wombat Toys</h4>-->
+                            <h5 class="modal-title" id="addRecordLabel">Toy Race Car Customizer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="display: grid; grid-template-columns: auto auto">
+
+                                <div>
+                                    <div style="margin:auto"><img class="center_image" src="./img/model.png"
+                                                                  style="height: 100px"/></div>
+                                    <br/>
+                                    <label style="font-family: fantasy;font-size: large; ">Name: <input
+                                            value="Car Toy #1" id="model_name"
+                                            style="background-color:#f9f9f9;border:1px solid #999;border-radius:4px;height:3rem;line-height:2;font-size:1.8rem;color:#333;"></label>
+                                    <table class="table" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Vendor</th>
+                                            <th scope="col">Wholesale</th>
+                                            <th scope="col">Retail</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><span class="part_count">4</span></th>
+                                            <td>
+                                                <div class="inventory_part"><img src="./img/wheel.png"/>
+                                                    <select class="form-control part_choices" id="wheel_choice">
+                                                        <option>ww001 Wheel, Natural</option>
+                                                        <option>ww006 Race Car, Red</option>
+                                                        <option>ww01 Axel, Metal</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>WoodWrx</td>
+                                            <td>$16.00</td>
+                                            <td>$20.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><span class="part_count">1</span></th>
+                                            <td>
+                                                <div class="inventory_part"><img src="./img/model.png"/>
+                                                    <select class="form-control part_choices" id="body_choice">
+                                                        <option>ww001 Wheel, Natural</option>
+                                                        <option>ww006 Race Car, Red</option>
+                                                        <option>ww01 Axel, Metal</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>WoodWrx</td>
+                                            <td>$10.00</td>
+                                            <td>$15.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><span class="part_count">4</span></th>
+                                            <td>
+                                                <div class="inventory_part"><img src="./img/axle.png"/>
+                                                    <select class="form-control part_choices" id="axle_choice">
+                                                        <option>ww001 Wheel, Natural</option>
+                                                        <option>ww006 Race Car, Red</option>
+                                                        <option>ww01 Axel, Metal</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>MorMetal</td>
+                                            <td>$2.00</td>
+                                            <td>$3.00</td>
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
+                                    <div>
+                                        <div></div>
+                                        <div class="totals">
+                                            <div>
+                                                <div>Sub Totals:</div>
+                                                <div>$28.00</div>
+                                                <div>$38.00</div>
+
+                                            </div>
+                                            <div>
+                                                <div></div>
+                                                <div></div>
+                                                <label>Number of products: <input
+                                                    value="4" id="total_products"
+                                                    style="width:40px;height:3rem;"></label>
+                                            </div>
+                                            <div>
+                                                <div>Totals:</div>
+                                                <div>$112.00</div>
+                                                <div>$152.00</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="bomView" class="sideView" style="display: none">
+                                    <span class="item_label">BOM: Car Toy #1</span>
+                                    <table class="table" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Qty</th>
+                                            <th scope="col">Part No.</th>
+                                            <th scope="col" style="width: 100px">Part Name</th>
+                                            <th scope="col">Vendor</th>
+                                            <th scope="col">Cost</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><img src="./img/wheel.png"></th>
+                                            <td>
+                                                16
+                                            </td>
+                                            <td>ww001</td>
+                                            <td>Wheel, Wood</td>
+                                            <td>WoodWrx</td>
+                                            <td>$3.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><img src="./img/body.png"></th>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td>ww002</td>
+                                            <td>Body, Red</td>
+                                            <td>WoodWrx</td>
+                                            <td>$4.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="pull-right"><img src="./img/axle.png"></th>
+                                            <td>
+                                                16
+                                            </td>
+                                            <td>ww001</td>
+                                            <td>Axle</td>
+                                            <td>MorMetal</td>
+                                            <td>$2.00</td>
+                                        </tr>
+                                        <tr class="summary">
+                                            <th></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Total</td>
+                                            <td>$112.00</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-target="#generateBOM"
+                                        onclick='document.getElementById("bomView").style.display ="grid"'>Generate BOM
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        onclick='document.getElementById("bomView").style.display ="none"'
+                                >Close</button>
+                                <button type="button" class="btn btn-primary" id="sameModel">Save</button>
+                            </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script>
+            var Inventory = [
+                ["wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21"],
+                ["wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14"],
+                ["axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2"],
+                ["body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18"],
+                ["body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16"],
+                ["body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12"],
+                ["body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11"],
+                ["body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10"],
+
+            ];
+
+            const Cars = [
+                {
+                    name: "Car Toy #1",
+                    parts: {
+                        axle: 2,
+                        body: 3,
+                        wheels: 0
+                    }
+                },
+                {
+                    name: "Car Toy #2",
+                    parts: {
+                        axle: 2,
+                        body: 4,
+                        wheels: 2
+                    }
+                },
+            ]
+
+
+        </script>
+
+
+</body>
+</html>

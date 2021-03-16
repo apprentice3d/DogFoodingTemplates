@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Manager</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+<!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav left">
+            <li>
+                <a href="http://developer.autodesk.com" target="_blank">
+                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="20">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of navbar -->
+<div class="container-fluid">
+    <div class="row fill">
+        <!--        <div class="col-sm-8 fill">-->
+        <div class="container" id="table_container">
+            <div class="panel panel-default my_card">
+                <h4 class="panel-heading"> Wombat Toys
+                </h4>
+                <div class="role_list">
+                    <button type="button" class="btn btn-light pull-right btn-lg" onclick="window.location.href='/customer.html'">Customer</button>
+                    <button type="button" class="btn btn-light pull-right btn-lg" onclick="window.location.href='/admin.html'">Admin</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
