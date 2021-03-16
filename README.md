@@ -11,7 +11,7 @@ or easily strip the logic and use it just as HTML/CSS templates.
 
 ### [Scenario #2: BOM Generation and Product Customization](./02.BomGeneration)
 
-
+![BOM_Template](https://user-images.githubusercontent.com/969404/111391413-fc36f100-868a-11eb-827a-e2c90eb394d7.gif)
 
 -------
 
