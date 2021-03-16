@@ -5,7 +5,7 @@ class Designer {
         this.itemNameElement = this.card.getElementsByClassName("item_name")[0];
         this.imageTypeElement = this.card.getElementsByClassName("center_image")[0];
         this.historyElement = this.card.getElementsByClassName("history")[0];
-        this.designerHistoryElement = this.card.getElementsByClassName("dev_history")[0];
+        // this.designerHistoryElement = this.card.getElementsByClassName("dev_history")[0];
 
         this.body_type = document.getElementById("body_type");
         this.wheel_type = document.getElementById("wheel_type");
@@ -72,7 +72,7 @@ class Designer {
             return
         }
         console.log("RECEIVED:", data);
-        this.status.value = data["status"] || "Draft";
+        this.status.textContent = data["status"];
         this.historyElement.innerHTML = "";
         this.itemNameElement.textContent = data["design_name"];
         this.imageTypeElement.src = "http://" + document.location.host + "/img/" + data["body_type"] + ".png";
