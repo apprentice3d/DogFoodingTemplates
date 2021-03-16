@@ -140,4 +140,4 @@ New design choice will also be sent to `/designer` websocket endpoint, having th
 -----
 
 After all is implemented, the following behaviour is expected:
-![PM_EXAMPLE](https://user-images.githubusercontent.com/969404/111329844-d0dde300-8645-11eb-9d7b-96c0b23d9c5e.gif)
+![PM_EXAMPLE_TRIMMED](https://user-images.githubusercontent.com/969404/111333198-d983e880-8648-11eb-81f5-7145321e3f41.gif)
