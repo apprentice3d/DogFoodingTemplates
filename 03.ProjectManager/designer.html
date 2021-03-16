@@ -28,8 +28,8 @@
 <div class="container-fluid">
     <div class="row fill">
         <!--        <div class="col-sm-8 fill">-->
-        <div class="container col-xs-6" id="table_container">
-            <div class="panel panel-default my_card">
+        <div class="container" id="table_container">
+            <div class="panel panel-default my_card" id="designerType">
                 <div class="panel-heading titleBar">
                     <h4> Wombat Toys  </h4>
                     <h4 class="user-type-label"> Designer </h4>
@@ -42,21 +42,21 @@
                             <span class="panel_label">Design Feedback</span>
                         </div>
                         <div>
-                            <span class="item_name pull-right">Review Status: <span>Draft</span></span>
+                            <span class="item_status pull-right">Review Status: <span id="status">Draft</span></span>
                         </div>
                     </div>
                     <div style="margin-left:15px;">
                         <span class="item_name">Car Toy #1</span>
                         <div class="pull-right" style="position:relative">
                             <div class="form-group my_options">
-                                <select class="form-control" id="body">
+                                <select class="form-control" id="body_type">
                                     <option>Body Design #1</option>
                                     <option>Body Design #2</option>
                                     <option>Body Design #3</option>
                                 </select>
                             </div>
                             <div class="form-group my_options">
-                                <select class="form-control" id="wheel">
+                                <select class="form-control" id="wheel_type">
                                     <option>Wheel Design #1</option>
                                     <option>Wheel Design #2</option>
                                     <option>Wheel Design #3</option>
@@ -68,7 +68,7 @@
                     <!--                    </div>-->
                    <img class="center_image" src="./img/model.png"/>
 
-                    <div class="comment_box">
+                    <div class="comment_box history">
                         <div class="change_record">
                             <img class="change_user" style="width:50px; height:50px"/>
                             <div class="record">
@@ -101,18 +101,18 @@
                         </div>
 
                     </div>
-                    <div class="comment_box">
-                        <div class="change_record">
-                            <img class="change_user" style="width:50px; height:50px"/>
-                            <div class="record">
-                                <span class="user_label">Designer, Today 10th, 1pm</span>
-                                <div class="change_content">
-                                    <span>Design updated to Body Design #1</span>
-                                </div>
+<!--                    <div class="comment_box dev_history">-->
+<!--                        <div class="change_record">-->
+<!--                            <img class="change_user" style="width:50px; height:50px"/>-->
+<!--                            <div class="record">-->
+<!--                                <span class="user_label">Designer, Today 10th, 1pm</span>-->
+<!--                                <div class="change_content">-->
+<!--                                    <span>Design updated to Body Design #1</span>-->
+<!--                                </div>-->
 
-                            </div>
-                        </div>
-                    </div>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -121,18 +121,10 @@
 </div>
 
 
-<script>
-    var dataSet = [
-        [ "wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21" ],
-        [ "wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14" ],
-        [ "axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2" ],
-        [ "body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18" ],
-        [ "body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16" ],
-        [ "body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12" ],
-        [ "body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11" ],
-        [ "body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10" ],
+<script type="module">
+   import {Designer} from "./js/designer.js";
+   new Designer("designerType").setupConnection("ws://"+document.location.host+"/designer")
 
-    ];
 
 </script>
 

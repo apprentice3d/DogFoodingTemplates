@@ -103,7 +103,7 @@ h4 {
     border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 /*.panel-default {*/
@@ -269,6 +269,20 @@ h4 {
     /*font-size: 15px;*/
 }
 
+.item_status{
+    font-family: fantasy;
+    font-size: medium;
+    font-weight: bold;
+    /*color: #999999;*/
+    /*font-family: inherit;*/
+    /*font-weight: 500;*/
+    line-height: 1.1;
+    /*color: inherit;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*font-size: 15px;*/
+}
+
 .titleBar{
     display: grid;
     grid-template-columns: auto auto;
@@ -285,4 +299,23 @@ h4 {
 .subtitle {
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.role_list{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.history {
+    max-height: 210px;
+    overflow-y: visible;
+    overflow-y: scroll;
+}
+
+.dev_history {
+    max-height: 210px;
+    overflow-y: visible;
+    overflow-y: scroll;
 }
