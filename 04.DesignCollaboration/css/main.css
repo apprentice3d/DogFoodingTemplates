@@ -63,8 +63,18 @@
     grid-column-gap: 50px;
 }
 
+#designer_card {
+    /*padding-top: 200px;*/
+    margin-top: 70px;
+    /*width: 600px;*/
+    display: grid;
+    grid-template-columns: 100px auto auto;
+    /*grid-template-rows: auto;*/
+    grid-column-gap: 50px;
+}
+
 .my_card {
-    width: 600px;
+    width: fit-content;
 }
 
 /*.panel-heading {*/
@@ -140,9 +150,24 @@ h4 {
     /*padding-right: 30px;*/
 }
 
+.recordDisplay {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    /*grid-column-gap: 10px;*/
+    grid-row-gap: 10px;
+    /*margin-right: 20px;*/
+    /*margin-right: 60px;*/
+    /*margin-right: auto;*/
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+}
+
 .card_content {
     margin: 5px;
     padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .card_content > div{
     margin-top: 10px;
@@ -155,6 +180,16 @@ h4 {
 }
 
 .my_options > label {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 10px;
+    text-align: right;
+    font-family: fantasy;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.my_options > span {
     margin-top: 10px;
     margin-right: 15px;
     margin-left: 10px;
@@ -192,6 +227,8 @@ h4 {
     min-height: 100px;
     display: grid;
     grid-template-columns: auto auto;
+    overflow-y: scroll;
+    max-height: 300px;
 }
 
 .change_record {
@@ -205,6 +242,7 @@ h4 {
 .record {
     width: 200px;
     /*border:1px solid black;*/
+    cursor: pointer;
 }
 
 .user_label {
@@ -229,4 +267,43 @@ h4 {
     height: 50px;
     background-image: url(../img/user.png);
     background-size: 50px 50px;
+}
+
+#recordView {
+    display: grid;
+    grid-template-rows: 45px 100px 100px;
+
+
+    border-left: 1px solid gainsboro;
+    width: 400px;
+    margin-left: 10px;
+    padding-left: 10px;
+
+}
+
+#revertButton {
+    margin:10px;
+}
+
+.buttonGroup {
+    display: grid;
+    grid-template-rows: 70px 70px;
+}
+
+.buttonGroup > button{
+    height: 50px;
+    margin: 10px;
+}
+
+.user-label {
+    display: table-cell;
+    text-align: right;
+    font-family: fantasy;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.titleBar{
+    display: grid;
+    grid-template-columns: auto auto;
 }

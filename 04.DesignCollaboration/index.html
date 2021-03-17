@@ -7,9 +7,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
 <!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
@@ -18,7 +18,8 @@
         <ul class="nav navbar-nav left">
             <li>
                 <a href="http://developer.autodesk.com" target="_blank">
-                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png" height="20">
+                    <img alt="Autodesk Forge" src="//developer.static.autodesk.com/images/logo_forge-2-line.png"
+                         height="20">
                 </a>
             </li>
         </ul>
@@ -27,185 +28,132 @@
 <!-- End of navbar -->
 <div class="container-fluid">
     <div class="row fill">
-<!--        <div class="col-sm-8 fill">-->
-        <div class="container col-xs-6" id="table_container">
+        <!--        <div class="col-sm-8 fill">-->
+        <div class="container" id="designer_card">
             <div class="panel panel-default my_card">
-                <h4 class="panel-heading"> Wombat Toys
-                </h4>
+                <div class="panel-heading titleBar">
+                    <h4> Wombat Toys  </h4>
+                    <h4 class="user-label" id="userID"></h4>
+                </div>
                 <div class="card_content">
-<!--                    <div class="" style="background-color: red;">-->
+                    <div>
+                        <!--                    <div class="" style="background-color: red;">-->
                         <h4 class="panel_label">Toy Designer</h4>
-<!--                    </div>-->
-                    <div style="margin:auto"><img class="center_image" src="./img/model.png" style="height: 100px"/></div>
-                    <div class="ml-auto options">
-                        <div class="form-group my_options">
-                            <label for="body">Body Style:</label>
-                            <select class="form-control" id="body">
-                                <option>Race Car</option>
-                                <option>Truck</option>
-                                <option>Sedan</option>
-                                <option>Van</option>
-                            </select>
+                        <!--                    </div>-->
+                        <div style="margin:auto"><img class="center_image" src="./img/model.png" style="height: 100px"/>
                         </div>
-                        <div class="form-group my_options">
-                            <label for="color">Color:</label>
-                            <select class="form-control" id="color">
-                                <option>Red</option>
-                                <option>Green</option>
-                                <option>Blue</option>
-                                <option>Silver</option>
-                            </select>
-                        </div>
-                        <div class="form-group my_options">
-                            <label for="wheel">Wheel Type:</label>
-                            <select class="form-control" id="wheel">
-                                <option>On-Road</option>
-                                <option>Winter</option>
-                                <option>Tarmac</option>
-                                <option>Gravel</option>
-                            </select>
-                        </div>
-                        <div class="form-group my_options">
-                            <label for="size">Size:</label>
-                            <select class="form-control" id="size">
-                                <option>Small</option>
-                                <option>Normal</option>
-                                <option>Monster</option>
-                            </select>
-                        </div>
+                        <div class="ml-auto options">
+                            <div class="form-group my_options">
+                                <label for="body">Body Style:</label>
+                                <select class="form-control" id="body">
+                                    <option>Race Car</option>
+                                    <option>Truck</option>
+                                    <option>Sedan</option>
+                                    <option>Van</option>
+                                </select>
+                            </div>
+                            <div class="form-group my_options">
+                                <label for="color">Color:</label>
+                                <select class="form-control" id="color">
+                                    <option>Red</option>
+                                    <option>Green</option>
+                                    <option>Blue</option>
+                                    <option>Silver</option>
+                                </select>
+                            </div>
+                            <div class="form-group my_options">
+                                <label for="wheel">Wheel Type:</label>
+                                <select class="form-control" id="wheel">
+                                    <option>On-Road</option>
+                                    <option>Winter</option>
+                                    <option>Tarmac</option>
+                                    <option>Gravel</option>
+                                </select>
+                            </div>
+                            <div class="form-group my_options">
+                                <label for="size">Size:</label>
+                                <select class="form-control" id="size">
+                                    <option>Small</option>
+                                    <option>Normal</option>
+                                    <option>Monster</option>
+                                </select>
+                            </div>
 
 
+                        </div>
+                        <div class="align-items-center" style="height: 50px;">
+                            <button type="button" class="btn btn-light pull-right btn-lg save_btn" id="saveButton">
+                                Save
+                            </button>
+                        </div>
+                        <div class="log_box" id="log">
+                            <div class="change_record">
+                                <img class="change_user"/>
+                                <div class="record">
+                                    <span class="user_label">Designer #1, Today, 1pm</span>
+                                    <div class="change_content">
+                                        <span>Body Style set to Race Car</span>
+                                        <span>Wheel Style set to on-Road</span>
+                                        <span>Color set to sylver</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="change_record">
+                                <img class="change_user" style="width:50px; height:50px"/>
+                                <div class="record">
+                                    <span class="user_label">Designer #1, March 10th, 1pm</span>
+                                    <div class="change_content">
+                                        <span>Body Style set to Truck Car</span>
+                                        <span>Wheel Style set to on-Road</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="change_record">
+                                <img class="change_user" style="width:50px; height:50px"/>
+                                <div class="record">
+                                    <span class="user_label">Designer #1,March 9th, 1pm</span>
+                                    <div class="change_content">
+                                        <span>Wheel Size set to Small</span>
+                                        <span>Wheel set to Tarmac</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="align-items-center"  style="height: 50px;">
-                        <button type="button" class="btn btn-light pull-right btn-lg save_btn">Save</button>
-                    </div>
-                    <div class="log_box">
-                        <div class="change_record">
-                            <img class="change_user" />
-                            <div class="record">
-                                <span class="user_label">Designer #1, Today, 1pm</span>
-                                <div class="change_content">
-                                    <span>Body Style set to Race Car</span>
-                                    <span>Wheel Style set to on-Road</span>
-                                    <span>Color set to silver</span>
-                                </div>
-
-                            </div>
+                    <div id="recordView" class="sideView" style="display: none">
+                        <span class="item_label" id="recordDesigner">Designer #1</span>
+                        <div><img id="recordImage" class="center_image" src="./img/model.png" style="height: 100px"/>
                         </div>
-                        <div class="change_record">
-                            <img class="change_user" style="width:50px; height:50px"/>
-                            <div class="record">
-                                <span class="user_label">Designer #1, March 10th, 1pm</span>
-                                <div class="change_content">
-                                    <span>Body Style set to Truck Car</span>
-                                    <span>Wheel Style set to on-Road</span>
-                                </div>
-
+                        <div class="ml-auto recordDisplay">
+                            <div class="form-group my_options">
+                                <span id="recordBody">Body Style: Race Car</span>
                             </div>
-                        </div>
-                        <div class="change_record">
-                            <img class="change_user" style="width:50px; height:50px"/>
-                            <div class="record">
-                                <span class="user_label">Designer #1,March 9th, 1pm</span>
-                                <div class="change_content">
-                                    <span>Wheel Size set to Small</span>
-                                    <span>Wheel set to Tarmac</span>
-                                </div>
-
+                            <div class="form-group my_options">
+                                <span id="recordColor">Color: Red</span>
                             </div>
-                        </div>
+                            <div class="form-group my_options">
+                                <span id="recordWheel">Wheel Type: On-Road</span>
+                            </div>
+                            <div class="form-group my_options">
+                                <span id="recordSize">Size: Small</span>
+                            </div>
 
+                        </div>
+                        <div class="buttonGroup">
+                            <button type="button" class="btn btn-light pull-right btn-lg" id="revertButton">
+                                Revert to this
+                            </button>
+                            <button type="button" class="btn btn-light pull-right btn-lg" id="cancelButton"
+                            onclick='document.getElementById("recordView").style.display="none"'>
+                                Cancel
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="panel panel-default my_card">
-                <h4 class="panel-heading"> Wombat Toys
-                </h4>
-                <div class="card_content">
-<!--                    <div class="" style="background-color: red;">-->
-                        <h4 class="panel_label">Toy Designer</h4>
-<!--                    </div>-->
-                    <div style="margin:auto"><img class="center_image" src="./img/truck.png" style="height: 100px"/></div>
-                    <div class="ml-auto options">
-                        <div class="form-group my_options">
-                            <label for="body">Body Style:</label>
-                            <select class="form-control" id="body">
-                                <option>Race Car</option>
-                                <option>Truck</option>
-                                <option>Sedan</option>
-                                <option>Van</option>
-                            </select>
-                        </div>
-                        <div class="form-group my_options">
-                            <label for="color">Color:</label>
-                            <select class="form-control" id="color">
-                                <option>Red</option>
-                                <option>Green</option>
-                                <option>Blue</option>
-                                <option>Silver</option>
-                            </select>
-                        </div>
-                        <div class="form-group my_options">
-                            <label for="wheel">Wheel Type:</label>
-                            <select class="form-control" id="wheel">
-                                <option>On-Road</option>
-                                <option>Winter</option>
-                                <option>Tarmac</option>
-                                <option>Gravel</option>
-                            </select>
-                        </div>
-                        <div class="form-group my_options">
-                            <label for="size">Size:</label>
-                            <select class="form-control" id="size">
-                                <option>Small</option>
-                                <option>Normal</option>
-                                <option>Monster</option>
-                            </select>
-                        </div>
 
-
-                    </div>
-                    <div class="align-items-center"  style="height: 50px;">
-                        <button type="button" class="btn btn-light pull-right btn-lg save_btn">Save</button>
-                    </div>
-                    <div class="log_box">
-                        <div class="change_record">
-                            <img class="change_user" />
-                            <div class="record">
-                                <span class="user_label">Designer #1, Today, 1pm</span>
-                                <div class="change_content">
-                                    <span>Body Style set to Race Car</span>
-                                    <span>Wheel Style set to on-Road</span>
-                                    <span>Color set to sylver</span>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="change_record">
-                            <img class="change_user" style="width:50px; height:50px"/>
-                            <div class="record">
-                                <span class="user_label">Designer #1, March 10th, 1pm</span>
-                                <div class="change_content">
-                                    <span>Body Style set to Truck Car</span>
-                                    <span>Wheel Style set to on-Road</span>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="change_record">
-                            <img class="change_user" style="width:50px; height:50px"/>
-                            <div class="record">
-                                <span class="user_label">Designer #1,March 9th, 1pm</span>
-                                <div class="change_content">
-                                    <span>Wheel Size set to Small</span>
-                                    <span>Wheel set to Tarmac</span>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -213,18 +161,10 @@
 </div>
 
 
-<script>
-    var dataSet = [
-        [ "wheel", "ww001", "Wheel, Wood", "WoodWrx", "Wood Racer", "$3.00", "21" ],
-        [ "wheel", "mw002", "Wheel, Metal", "MorMetal", "Metal Sedan", "$3.00", "14" ],
-        [ "axle", "mw001", "Axle", "MorMetal", "Wood Racer, Metal Sedan", "$2.00", "2" ],
-        [ "body", "ww002", "Body, Red", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "18" ],
-        [ "body", "ww003", "Body, Blue", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "16" ],
-        [ "body", "ww004", "Body, Green", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "12" ],
-        [ "body", "ww005", "Body, Yellow", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "11" ],
-        [ "body", "ww006", "Body, Natural", "WoodWrx", "Wood Racer, Metal Sedan", "$4.00", "10" ],
+<script type="module">
+    import {User} from "./js/user.js";
 
-    ];
+    new User("designer_card").setupConnection("ws://" + document.location.host + "/user")
 
 </script>
 

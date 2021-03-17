@@ -33,6 +33,7 @@ class Client {
         this.websocket.onclose = this.onClose;
         this.websocket.onmessage = this.onMessage;
         this.websocket.onerror = this.onError;
+        this.ws_address = url;
     }
 
     onOpen(evt) {
